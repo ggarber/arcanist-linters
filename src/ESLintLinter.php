@@ -109,10 +109,6 @@ final class ESLintLinter extends ArcanistExternalLinter {
   }
 
   protected function parseLinterOutput($path, $err, $stdout, $stderr) {
-    if ($err) {
-      return;
-    }
-
     $json = json_decode($stdout, true);
     $messages = array();
 
